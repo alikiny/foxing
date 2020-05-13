@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <!-- <link rel='manifest' href='../manifest.json'> -->
+    <link rel='icon' href='./images/fox.png'>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid mb-2 bg-warning text-center" id="foxing-text">Foxing</div>
+
+    <div class="row container-fluid">
+        <div  class="col-3" id="sidebar">
+            <script id="user-list">
+                <h2 id="room-name">Chat room: {{room}}</h2>
+                
+                <h3 id="active-user">Active users</h3>
+                <ul class="list-group list-group-flush p-2">
+                    {{#users}}
+                        <li class="list-group-item" style="color: darkcyan">{{username}}</li>
+                    {{/users}}
+                </ul>
+            </script>
+        </div>
+
+        <div class="col-9 p-0">
+            <!-- <div class="container-fluid"> -->
+                <div class="border border-warning rounded" id="messages" style="height:400px; overflow:scroll">
+        
+                </div>
+            <!-- </div> -->
+        
+            <form class="mt-2">
+                <div class="form-row">
+                    <div class="col-auto">
+                        <input type="text" name="message" id="message" class="form-control" placeholder="New message" autofocus>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-primary mb-2" type="submit" id="submit" disabled>Send</button>
+                    </div>
+                    <div class="col-auto">
+                        
+                        <button type="button" id="share-location" class="btn btn-outline-* mb-2">
+                            <img src="./images/location.png" width="30px" >
+                            Share my location
+                        </button>
+                    </div>
+                </div>
+        
+        
+            </form>
+        
+        
+            <script id="message-template" type="text/template">
+                    <div>
+                        <p class="user-name p-0 m-0">{{user}} <span class="sent-time">Sent: {{time}}</span></p>
+                        <p class="p-0 m-0">{{message}} </p>
+                    </div>
+            </script>
+        
+            <script id="location-template" type="text/template">
+                    <div>
+                        <p class="user-name">{{user}} <span class="sent-time">Shared a location {{sharedAt}}</span></p>
+                        <a href="{{url}}" target="_blank">My location</a>
+                        
+                    </div>
+            </script>
+        </div>
+        
+    </div>
+    <footer class="bottom">
+        &#169;theNycode.com
+    </footer>
+
+    <script src='/socket.io/socket.io.js'> </script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.3/qs.min.js   '></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+    <script src="./js/chat.js"></script>
+
+
+
+
+</body>
+
+
+</html>

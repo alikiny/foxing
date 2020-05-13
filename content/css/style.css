@@ -1,0 +1,81 @@
+#foxing-text{
+    color: black;
+    font-family: 'Acme', sans-serif;
+    font-size: 50pt;
+}
+
+#foxing-text-opening{
+    color: black;
+    font-family: 'Acme', sans-serif;
+    font-size: 100pt;
+}
+
+#join-button{
+   
+    border: none;
+    background-color: #FFC128;
+    font-size: 50pt;
+    margin: auto;
+}
+
+#form-container{
+    max-width: 300px;
+    background-color: blanchedalmond;
+    padding: 30px;
+    font-size: 20px;
+    margin-bottom: 50px;
+    margin-left: 40%;
+    display: none;
+    border-radius: 10%;
+
+}
+
+#main-content{
+    position: relative;
+    min-height: 100vh;
+}
+
+#room-name{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: blanchedalmond;
+    font-family: 'Acme', sans-serif;
+}
+
+#active-user{
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    color: darkcyan;
+}
+#sidebar{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-body{
+    background-color: #FFC128;
+   
+}
+
+
+
+.user-name{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sent-time{
+    font-size: 12px;
+    font-weight: normal;
+    float: right;
+}
+
+.bottom{
+   
+    width: 100%;
+    text-align: center;
+    
+}
